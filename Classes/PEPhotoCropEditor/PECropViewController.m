@@ -68,11 +68,8 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
         UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
                                                                                        target:nil
                                                                                        action:nil];
-        UIBarButtonItem *constrainButton = [[UIBarButtonItem alloc] initWithTitle:PELocalizedString(@"Constrain", nil)
-                                                                            style:UIBarButtonItemStyleBordered
-                                                                           target:self
-                                                                           action:@selector(constrain:)];
-        self.toolbarItems = @[flexibleSpace, constrainButton, flexibleSpace];
+       
+        self.toolbarItems = @[flexibleSpace, flexibleSpace];
     }
     self.navigationController.toolbarHidden = self.toolbarHidden;
     
@@ -179,13 +176,7 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
                                           otherButtonTitles:
                         PELocalizedString(@"Original", nil),
                         PELocalizedString(@"Square", nil),
-                        PELocalizedString(@"3 x 2", nil),
-                        PELocalizedString(@"3 x 5", nil),
-                        PELocalizedString(@"4 x 3", nil),
-                        PELocalizedString(@"4 x 6", nil),
-                        PELocalizedString(@"5 x 7", nil),
-                        PELocalizedString(@"8 x 10", nil),
-                        PELocalizedString(@"16 x 9", nil), nil];
+                       
     [self.actionSheet showInView:self.navigationController.view];
 }
 
